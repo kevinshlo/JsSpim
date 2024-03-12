@@ -125,6 +125,13 @@ static int running_in_delay_slot = 0;
 		 }
 
 
+#ifdef LAB2  // Lab 2 requires address calculation with delay slot but should not execute the instr in delay slot
+#define JUMP_INST(TARGET)					\
+		{						\
+		    /* -4 since PC is bumped after this inst */	\
+		    PC = (TARGET) - BYTES_PER_WORD;		\
+		 }
+#else
 #define JUMP_INST(TARGET)					\
 		{						\
 		  if (delayed_branches)				\
@@ -136,6 +143,7 @@ static int running_in_delay_slot = 0;
 		    /* -4 since PC is bumped after this inst */	\
 		    PC = (TARGET) - BYTES_PER_WORD;		\
 		 }
+#endif
 
 
 /* If the delayed_load flag is false, the result from a load is available

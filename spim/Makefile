@@ -94,12 +94,17 @@ spim:   $(OBJS)
 	$(CXX) $(OBJS) $(LDFLAGS) -o wasm.js
 #	sed -i '' 's/throw"getitimer() is not implemented yet"//g' wasm.js
 #	sed -i '' 's/throw"setitimer() is not implemented yet"//g' wasm.js
+	mkdir -p ../$(WASM_DIR)
 	mv wasm.* ../$(WASM_DIR)
 
 
 TAGS:	*.cpp *.h *.l *.y
 	etags *.l *.y *.cpp *.h
 
+Lab2: CXXFLAGS += -DLAB2
+Lab2: WASM_DIR = Lab2
+Lab2: spim
+	sed -e 's/src="wasm.js"/src="Lab2\/wasm.js"/g' ../index.html > ../Lab2.html
 
 clean:
 	rm -f *.o TAGS test.out lex.yy.cpp parser_yacc.cpp parser_yacc.h y.output ../wasm.*

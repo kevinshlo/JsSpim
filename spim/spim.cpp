@@ -49,7 +49,11 @@
 using namespace emscripten;
 
 bool bare_machine;        /* => simulate bare machine */
+#ifdef LAB2  // Lab 2 requires address calculation with delay slot but should not execute the instr in delay slot
+bool delayed_branches = true;        /* => simulate delayed branches */
+#else
 bool delayed_branches;        /* => simulate delayed branches */
+#endif
 bool delayed_loads;        /* => simulate delayed loads */
 bool accept_pseudo_insts = true;    /* => parse pseudo instructions  */
 bool quiet;            /* => no warning messages */

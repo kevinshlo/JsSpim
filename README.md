@@ -1,5 +1,10 @@
-This repos is forked from [ShawnZhong/JsSpim](https://github.com/ShawnZhong/JsSpim/) .  
-Modified for NYCU Computer Organization 2024 course labs.
+This repo is forked from [ShawnZhong/JsSpim](https://github.com/ShawnZhong/JsSpim/) .  
+Modified for NYCU Computer Organization 2024 course labs:
+
+- Original (❌ branch delay slot, ❌ delayed address):  
+  [https://kevinshlo.github.io/JsSpim/index.html](https://kevinshlo.github.io/JsSpim/index.html)
+- Lab 2 (❌ branch delay slot, ✅ delayed address) (single-cycle):  
+  [https://kevinshlo.github.io/JsSpim/Lab2.html](https://kevinshlo.github.io/JsSpim/Lab2.html)
 
 ****
 
