@@ -1,3 +1,8 @@
+This repos is forked from [ShawnZhong/JsSpim](https://github.com/ShawnZhong/JsSpim/) .  
+Modified for NYCU Computer Organization 2024 course labs.
+
+****
+
 # JsSpim
 [JsSpim](https://shawnzhong.github.io/JsSpim/) is an online MIPS32 simulator based on Prof. James Larus's [Spim](http://spimsimulator.sourceforge.net/).
 

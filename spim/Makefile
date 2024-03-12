@@ -92,11 +92,10 @@ OBJS = spim.o spim-utils.o run.o mem.o inst.o data.o sym-tbl.o parser_yacc.o lex
 
 spim:   $(OBJS)
 	$(CXX) $(OBJS) $(LDFLAGS) -o wasm.js
-	sed -i '' 's/throw"getitimer() is not implemented yet"//g' wasm.js
-	sed -i '' 's/throw"setitimer() is not implemented yet"//g' wasm.js
-	mv wasm.* ../
+#	sed -i '' 's/throw"getitimer() is not implemented yet"//g' wasm.js
+#	sed -i '' 's/throw"setitimer() is not implemented yet"//g' wasm.js
+	mv wasm.* ../$(WASM_DIR)
 
-#
 
 TAGS:	*.cpp *.h *.l *.y
 	etags *.l *.y *.cpp *.h
@@ -129,7 +128,6 @@ lex.yy.o: lex.yy.cpp
 	$(CXX) $(LEXCFLAGS) -c lex.yy.cpp
 
 
-#
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 
 data.o: $(CPU_DIR)/spim.h

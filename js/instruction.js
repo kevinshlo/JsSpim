@@ -19,6 +19,8 @@ class InstructionUtils {
         kernelText.forEach(e => InstructionUtils.instructionDict[e.address] = e);
 
         InstructionUtils.formatCode();
+
+        Elements.kernelTextContainer.style.display = 'none';  // default don't show kernel text
     }
 
     static removeAllBreakpoints() {
@@ -74,7 +76,7 @@ class Instruction {
         this.text = text;
 
         this.isBreakpoint = false;
-        this.showBinary = false;
+        this.showBinary = true;  // default show machine code
         this.showSourceCode = true;
 
         this.addressString = this.text.substring(3, 11);

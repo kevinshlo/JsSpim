@@ -7,6 +7,8 @@ class MemoryUtils {
         this.userData.initialize();
         this.kernelData.initialize();
         this.stack.initialize();
+
+        Elements.kernelDataContainer.style.display = 'none';  // default don't show kernel text
     }
 
     static update() {
