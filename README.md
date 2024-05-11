@@ -5,6 +5,8 @@ Modified for NYCU Computer Organization 2024 course labs:
   [https://kevinshlo.github.io/JsSpim/index.html](https://kevinshlo.github.io/JsSpim/index.html)
 - Lab 2 (❌ branch delay slot, ✅ delayed address) (single-cycle):  
   [https://kevinshlo.github.io/JsSpim/Lab2.html](https://kevinshlo.github.io/JsSpim/Lab2.html)
+- Lab 4 (✅ branch delay slot, ✅ delayed address) (pipelined):  
+  [https://kevinshlo.github.io/JsSpim/Lab4.html](https://kevinshlo.github.io/JsSpim/Lab4.html)
 
 ****
 

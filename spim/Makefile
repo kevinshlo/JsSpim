@@ -106,6 +106,11 @@ Lab2: WASM_DIR = Lab2
 Lab2: spim
 	sed -e 's/src="wasm.js"/src="Lab2\/wasm.js"/g' ../index.html > ../Lab2.html
 
+Lab4: CXXFLAGS += -DLAB4
+Lab4: WASM_DIR = Lab4
+Lab4: spim
+	sed -e 's/src="wasm.js"/src="Lab4\/wasm.js"/g' ../index.html > ../Lab4.html
+
 clean:
 	rm -f *.o TAGS test.out lex.yy.cpp parser_yacc.cpp parser_yacc.h y.output ../wasm.*
 
