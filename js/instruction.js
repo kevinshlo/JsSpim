@@ -90,14 +90,17 @@ class Instruction {
 
         this.indexOfComma = this.text.indexOf(';');
 
-        // address
-        this.element.innerHTML = `[<span class="hljs-attr">${this.addressString}</span>] `;
+        // // address
+        // this.element.innerHTML = `[<span class="hljs-attr">${this.addressString}</span>] `;
 
         // instruction value
         this.binaryElement = document.createElement("span");
         this.binaryElement.innerText = this.getBinaryInnerText();
         this.binaryElement.classList.add("hljs-number");
         this.element.appendChild(this.binaryElement);
+
+        // address
+        this.element.appendChild(document.createTextNode(' // [' + this.addressString + '] '));
 
         // instruction
         this.instructionElement = document.createElement("span");

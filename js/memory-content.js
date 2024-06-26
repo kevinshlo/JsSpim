@@ -5,12 +5,15 @@ class MemoryLine {
             this.wordList.push(new MemoryWord(address, parent));
 
         this.element = document.createElement('span');
-        this.element.innerHTML = `[<span class='hljs-attr'>${startAddress.toString(16)}</span>] `;
+        // this.element.innerHTML = `[<span class='hljs-attr'>${startAddress.toString(16)}</span>] `;
 
         this.wordList.forEach(e => {
             this.element.appendChild(e.valueElement);
             this.element.appendChild(document.createTextNode(' '));
         });
+
+        this.element.appendChild(document.createTextNode(' // [' + startAddress.toString(16) + '] '));
+
         this.wordList.forEach(e => this.element.appendChild(e.stringElement));
         this.element.appendChild(document.createTextNode('\n'));
     }

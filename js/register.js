@@ -78,16 +78,22 @@ class Register {
         // init element
         this.element = document.createElement("div");
 
+        this.valueElement = document.createElement('span');
+        this.valueElement.classList.add("hljs-number");
+        this.element.appendChild(this.valueElement);
+
+        this.element.appendChild(document.createTextNode('  // '));
+
         const nameElement = document.createElement('span');
         nameElement.classList.add('hljs-string');
         nameElement.innerText = this.name;
         this.element.appendChild(nameElement);
 
-        this.element.appendChild(document.createTextNode(' = '));
+        // this.element.appendChild(document.createTextNode(' = '));
 
-        this.valueElement = document.createElement('span');
-        this.valueElement.classList.add("hljs-number");
-        this.element.appendChild(this.valueElement);
+        // this.valueElement = document.createElement('span');
+        // this.valueElement.classList.add("hljs-number");
+        // this.element.appendChild(this.valueElement);
     }
 
     updateValue(newValue) {
